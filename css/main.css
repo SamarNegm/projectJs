@@ -33,7 +33,7 @@ header
     font-size: 15px;
     border-radius: 30px;
     background-color: #fc8988;
-
+    box-shadow: 5px 5px 5px #888888; 
 }
  #badgecontainer 
 {
@@ -45,7 +45,7 @@ header
     height: 38px;
     float: right;
     margin-left: 6px;
-    
+    box-shadow: 5px 5px 5px #888888; 
     
     
 }
@@ -118,13 +118,14 @@ h1
     font-size: 70px;
     text-align: center;
     margin-top: 25px;
-
+  
 }
 .logo 
 {
     margin: 18px;
     width: 54px;
     height: auto;
+    
 }
 
 
@@ -141,10 +142,10 @@ h1
 .slider{
     margin: auto;
     width: 90%;
-    height: 550px;
+    height: 500px;
     border-radius: 30px;
     transition: all 0.5s ease-in;
-    
+    box-shadow: 5px 5px 5px #888888; 
 }
 #back{
     position: absolute;
@@ -188,6 +189,7 @@ h1
    background-color: #fc8988; 
     background-image: url(/img/contacts.jpg);
     backface-visibility: var(50%);
+    box-shadow: 5px 5px 5px #888888; 
     /* opacity: .4; */
 
 }
@@ -203,7 +205,8 @@ justify-items: center;
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;   
+    box-shadow: 5px 5px 5px #888888; 
 }
 .productimg{
     text-align: center;
@@ -252,7 +255,7 @@ table{
     margin-bottom: 10px;
 
 
-
+    box-shadow: 5px 5px 5px #888888; 
     border-radius: 30px;
     background-color:#fc8988;
 }
@@ -299,7 +302,9 @@ table{
     margin-right: auto;
     border-radius: 30px;
     padding-top: 20px;
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px #888888; 
 }
 .cartItem img{
     height: 130px;
@@ -342,4 +347,38 @@ table{
  input:active{
     border-color: #fc8988;
  
+ }
+ .container{
+     background-color: #D4DEE2;
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+ }
+ .contactCoulme{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+ }
+ .contactCoulme li{
+    margin: 6px 0;
+    list-style: none;
+ }
+ .contactCoulme li a{
+    color: darkslategrey;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.4s ease
+ }
+ .contactCoulme li a:hover{
+    color: #fc8988;
+    font-size: 14px;
+    font-weight: 400;
+
+    opacity: 0.8;
+    transition: all 0.4s ease
  }

@@ -1,7 +1,7 @@
 var mycart = JSON.parse(localStorage.getItem("cart"));
 var productPadgeCount = document.getElementById("badgeNumber");
-var cnt = JSON.parse(localStorage.getItem("count"));
-productPadgeCount.innerHTML = cnt;
+
+productPadgeCount.innerHTML = mycart.length;
 for (let i = 0; i < mycart.length; i++) {
     var cartDiv = document.getElementById("userCart");
     var productDetailes = document.createElement("div");
@@ -9,3 +9,10 @@ for (let i = 0; i < mycart.length; i++) {
     cartDiv.appendChild(productDetailes);
 
 }
+var cartIcon = document.getElementById("badgecontainer");
+cartIcon.addEventListener("click", function (e) {
+    win = window.open("cart.html", '_self');
+    var crt = window.localStorage;
+    crt.setItem("cart", JSON.stringify(cart.products));
+    console.log(cart.products[0] + " ,,, " + localStorage.getItem("cart"));
+})

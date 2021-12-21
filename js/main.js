@@ -33,20 +33,16 @@ class Cart {
 
 
 }
-var up = document.getElementById("up");
-up.addEventListener("click", function (e) {
 
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-
-})
 var cupPages = ["/html/c1.html", "/html/c2.html", "/html/c3.html", "/html/c4.html"]
 var cups = ["/img/cups/c1.png", "/img/cups/c2.png", "/img/cups/c3.png", "/img/cups/c4.png"];
 var dishes = ["/img/diches/d1.png", "/img/diches/d2.png", "/img/diches/d3.png", "/img/diches/d4.png"];
 var spoons = ["/img/spoons/s1.png", "/img/spoons/s2.png", "/img/spoons/s3.png", "/img/spoons/s4.png"];
 var kattels = ["/img/kattels/k1.png", "/img/kattels/k2.png", "/img/kattels/k3.png", "/img/kattels/k4.png"];
 var r = 1;
+var mycart = JSON.parse(localStorage.getItem("cart"));
 var productPadgeCount = document.getElementById("badgeNumber");
-var cnt = 0;
+productPadgeCount.innerHTML = mycart.length;
 var win;
 var cart = new Cart();
 for (var i = 0; i < dishes.length; i++) {
@@ -104,11 +100,11 @@ for (var i = 0; i < dishes.length; i++) {
 
 
     function addProductToCart(e) {
-        cnt++;
+
         cart.addProduct(findProductById((e.target.id).substr(1)));
-        productPadgeCount.innerHTML = cnt;
+        productPadgeCount.innerHTML = cart.products.length;
         var crt = window.localStorage;
-        crt.setItem("count", cnt);
+        crt.setItem("count", cart.products.length);
     }
 
 
